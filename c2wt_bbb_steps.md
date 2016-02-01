@@ -276,43 +276,60 @@
   * Compile the code by running `ant` from `$C2WTROOT` or by opening the Omnet++ IDE and running `c2wt build.xml` option from the run custom command toolbar button menu.
 * Update the classpath for the generated scripts:
   * In `$C2WTROOT/generated/BBBHelloWorld/scripts/main-Deployment/Main/start.sh` find the last `CLASSPATH` setting in the file and extend it with:
+
   ```bash
   :$C2WTROOT/3rdParty/java/libbulldog/bulldog.beagleboneblack.hardfp.jar
   ```
+
   * In `$C2WTROOT/generated/BBBHelloWorld/scripts/main-Deployment/<BBB IP Address>/Remote/start.sh` find the last `CLASSPATH` setting in the file and extend it with:
+
   ```bash
   :$C2WTROOT/3rdParty/java/libbulldog/bulldog.beagleboneblack.hardfp.jar
   ```
+
 * Install needed programs and configure the environment **on the BBB**:
+
   ```bash
   sudo apt-get install curl libjava3d-java openjdk-7-jdk xvfb ant
   ```
+
   * Download portico from [portico sourceforge](http://sourceforge.net/projects/portico/files/Portico/portico-2.0.2/):
+
   ```bash
   wget http://downloads.sourceforge.net/project/portico/Portico/portico-2.0.2/portico-2.0.2-linux64.tar.gz
   tar xvf portico-2.0.2-linux64.tar.gz
   ```
+
   * Environment Variable Configuration: add the following to the end of the `$HOME/.bashrc` file on your BBB:
+
   ```bash
   export C2WTROOT=$HOME/Projects/c2wt
   export RTI_HOME=<PATH TO PORTICO DIRECTORY>, e.g. export RTI_HOME=/home/ubuntu/portico-2.0.2
   export JAVA_HOME=<PATH TO JAVA_HOME>, e.g. export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-armhf
   ```
+
   * Configure ssh keys:
+
   ```bash
   ssh-keygen -y -f id_rsa > id_rsa.pub
   cat id_rsa.pub >> ~/.ssh/authorized_keys
   ```
+
 * Copy the built C2WT code over to the BBB:
   * **On the BBB**, make the `Projects` folder:
+
   ```bash
   mkdir -p ~/Projects
   ```
+
   * **From the C2WT machine**, copy the c2wt folder to the BBB:
+
   ```bash
   scp -r $C2WTROOT <BBB user-name>@<BBB IP>:~/Projects/.
   ```
+
 * Recompile the processID library for ARM architecture **on the BBB**:
+
   ```bash
   chmod +x $C2WTROOT/core/src/cpp/ProcessId/buildProcessIdJNI.sh
   $C2WTROOT/core/src/cpp/ProcessId/buildProcessIdJNI.sh
