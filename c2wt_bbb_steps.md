@@ -291,6 +291,11 @@
   export RTI_HOME=<PATH TO PORTICO DIRECTORY>, e.g. export RTI_HOME=/home/ubuntu/portico-2.0.2
   export JAVA_HOME=<PATH TO JAVA_HOME>, e.g. export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-armhf
   ```
+  * Configure ssh keys:
+  ```bash
+  ssh-keygen -y -f id_rsa > id_rsa.pub
+  cat id_rsa.pub >> ~/.ssh/authorized_keys
+  ```
 * Copy the built C2WT code over to the BBB:
   * **On the BBB**, make the `Projects` folder:
   ```bash
