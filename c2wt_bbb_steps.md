@@ -241,11 +241,6 @@
     ```
     * Copy `TemperatureSensor.java` into this folder
       * add `package BBBHelloWorld;` to the top of this file.
-  * Edit the file `$C2WTROOT/.classpath`
-    * Add a `classpathentry`:
-    ```xml
-    <classpathentry kind="lib" path="examples/BBBHelloWorld/java/BBBHelloWorld/bulldog.beagleboneblack.hardfp.jar"/>
-    ```
   * Edit the file `$C2WTROOT/build.properties`
     * Add the following properties under the `helloworld` properties:
     ```bash
@@ -275,7 +270,15 @@
     * Add `compile-BBBHelloWorld` to the `depends` list of the the target `compile`
 * Compilation
   * Compile the code by running `ant` from `$C2WTROOT` or by opening the Omnet++ IDE and running `c2wt build.xml` option from the run custom command toolbar button menu.
-
+* Update the classpath for the generated scripts:
+  * In `$C2WTROOT/generated/BBBHelloWorld/scripts/main-Deployment/Main/start.sh` find the last `CLASSPATH` setting in the file and extend it with:
+  ```bash
+  :$C2WTROOT/3rdParty/java/libbulldog/bulldog.beagleboneblack.hardfp.jar
+  ```
+  * In `$C2WTROOT/generated/BBBHelloWorld/scripts/main-Deployment/<BBB IP Address>/Remote/start.sh` find the last `CLASSPATH` setting in the file and extend it with:
+  ```bash
+  :$C2WTROOT/3rdParty/java/libbulldog/bulldog.beagleboneblack.hardfp.jar
+  ```
 * Install needed programs and configure the environment **on the BBB**:
   ```bash
   sudo apt-get install curl libjava3d-java openjdk-7-jdk xvfb ant
@@ -304,4 +307,9 @@
   * **From the C2WT machine**, copy the c2wt folder to the BBB:
   ```bash
   scp -r $C2WTROOT <BBB user-name>@<BBB IP>:~/Projects/.
+  ```
+* Recompile the processID library for ARM architecture **on the BBB**:
+  ```
+  chmod +x $C2WTROOT/core/src/cpp/ProcessId/buildProcessIdJNI.sh
+  $C2WTROOT/core/src/cpp/ProcessId/buildProcessIdJNI.sh
   ```
