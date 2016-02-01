@@ -313,7 +313,7 @@
   scp -r $C2WTROOT <BBB user-name>@<BBB IP>:~/Projects/.
   ```
 * Recompile the processID library for ARM architecture **on the BBB**:
-  ```
+  ```bash
   chmod +x $C2WTROOT/core/src/cpp/ProcessId/buildProcessIdJNI.sh
   $C2WTROOT/core/src/cpp/ProcessId/buildProcessIdJNI.sh
   ```
