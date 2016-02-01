@@ -256,6 +256,10 @@
     src.generated.bbbhelloworld.java.dir = ${src.generated.bbbhelloworld.dir}/java
     ```
   * Edit the file `$C2WTROOT/build.xml`
+    * add the following path element under `target init / path c2wt.class.path`:
+    ```xml
+    <pathelement path="${lib.java.dir}/libbulldog/bulldog.beagleboneblack.hardfp.jar"/>
+    ```
     * add the following target under the `compile-HelloWorld` target:
     ```xml
     <target name="compile-BBBHelloWorld" depends="compile-core">
