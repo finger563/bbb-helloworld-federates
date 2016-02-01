@@ -315,7 +315,7 @@
 
   ```bash
   wget http://downloads.sourceforge.net/project/portico/Portico/portico-1.0.2/portico-1.0.2-linux.tar.gz
-  tar xvf portico-2.0.2-linux64.tar.gz
+  tar xvf portico-1.0.2-linux.tar.gz
   ```
 
   * Environment Variable Configuration: add the following to the end of the `$HOME/.bashrc` and `/etc/profile` files on your BBB:
