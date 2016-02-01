@@ -277,26 +277,26 @@
   * Compile the code by running `ant` from `$C2WTROOT` or by opening the Omnet++ IDE and running `c2wt build.xml` option from the run custom command toolbar button menu.
 
 * Install needed programs and configure the environment **on the BBB**:
-    ```bash
-    sudo apt-get install curl libjava3d-java openjdk-7-jdk xvfb ant
-    ```
+  ```bash
+  sudo apt-get install curl libjava3d-java openjdk-7-jdk xvfb ant
+  ```
   * Download portico from [portico sourceforge](http://sourceforge.net/projects/portico/files/Portico/portico-2.0.2/):
-    ```bash
-    wget http://downloads.sourceforge.net/project/portico/Portico/portico-2.0.2/portico-2.0.2-linux64.tar.gz
-    tar xvf portico-2.0.2-linux64.tar.gz
-    ```
+  ```bash
+  wget http://downloads.sourceforge.net/project/portico/Portico/portico-2.0.2/portico-2.0.2-linux64.tar.gz
+  tar xvf portico-2.0.2-linux64.tar.gz
+  ```
   * Environment Variable Configuration: add the following to the end of the `$HOME/.bashrc` file on your BBB:
-    ```bash
-    export C2WTROOT=$HOME/Projects/c2wt`
-    export RTI_HOME=<PATH TO PORTICO DIRECTORY>`, e.g. `export RTI_HOME=/home/ubuntu/portico-2.0.2
-    export JAVA_HOME=<PATH TO JAVA>`, e.g. `export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-armhf
-    ```
+  ```bash
+  export C2WTROOT=$HOME/Projects/c2wt`
+  export RTI_HOME=<PATH TO PORTICO DIRECTORY>`, e.g. `export RTI_HOME=/home/ubuntu/portico-2.0.2
+  export JAVA_HOME=<PATH TO JAVA>`, e.g. `export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-armhf
+  ```
 * Copy the built C2WT code over to the BBB:
   * **On the BBB**, make the `Projects` folder:
-    ```bash
-    mkdir -p ~/Projects
-    ```
+  ```bash
+  mkdir -p ~/Projects
+  ```
   * **From the C2WT machine**, copy the c2wt folder to the BBB:
-    ```bash
-    scp -r $C2WTROOT <BBB user-name>@<BBB IP>:~/Projects/.
-    ```
+  ```bash
+  scp -r $C2WTROOT <BBB user-name>@<BBB IP>:~/Projects/.
+  ```
