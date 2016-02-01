@@ -287,9 +287,9 @@
   ```
   * Environment Variable Configuration: add the following to the end of the `$HOME/.bashrc` file on your BBB:
   ```bash
-  export C2WTROOT=$HOME/Projects/c2wt`
-  export RTI_HOME=<PATH TO PORTICO DIRECTORY>`, e.g. `export RTI_HOME=/home/ubuntu/portico-2.0.2
-  export JAVA_HOME=<PATH TO JAVA>`, e.g. `export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-armhf
+  export C2WTROOT=$HOME/Projects/c2wt
+  export RTI_HOME=<PATH TO PORTICO DIRECTORY>, e.g. export RTI_HOME=/home/ubuntu/portico-2.0.2
+  export JAVA_HOME=<PATH TO JAVA_HOME>, e.g. export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-armhf
   ```
 * Copy the built C2WT code over to the BBB:
   * **On the BBB**, make the `Projects` folder:
