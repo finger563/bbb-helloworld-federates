@@ -287,9 +287,6 @@
   :$C2WTROOT/3rdParty/java/libbulldog/bulldog.beagleboneblack.hardfp.jar
   ```
 
-* Configure the BBB:
-  * make sure to set up SSH keys for the root user on the BBB, this means that the public key
-
 * Install needed programs and configure the environment **on the BBB**:
   * Because the libbulldog code uses the GPIO, it requires **root** permissions when running the program.  For this reason it is recommended that everything for this sample be placed in the root directory `/root`, and use **root** as the username in the model for the BBB computer model.
 
