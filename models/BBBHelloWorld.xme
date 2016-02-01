@@ -1,0 +1,1288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project SYSTEM "mga.dtd">
+
+<project guid="{04C34FE5-D53D-48E4-98AE-0EB1A070D08F}" cdate="Mon Jan 25 11:24:51 2016" mdate="Mon Jan 25 11:24:51 2016" version="" metaguid="{2664F06E-397F-48A5-8AA9-D5E5C8190F07}" metaversion="" metaname="CASIM">
+	<name>BBBHelloWorld</name>
+	<comment></comment>
+	<author></author>
+	<folder id="id-006a-00000001" relid="0x1" childrelidcntr="0xd" kind="RootFolder" guid="{03a660b3-ee63-4f3d-a070-6641fc72bda3}">
+		<name>BBBHelloWorld</name>
+		<model id="id-0065-00000001" kind="FOMSheet" guid="{375aaca2-6c89-436a-bad5-a94e70e270d9}" relid="0x1" childrelidcntr="0x26">
+			<name>Interactions</name>
+			<attribute kind="MelderPackageName" status="meta">
+				<value></value>
+			</attribute>
+			<model id="id-0065-00000003" kind="Interaction" role="Interaction" guid="{76df16d6-a7fe-4002-82ed-866843ced196}" relid="0x2" childrelidcntr="0x4">
+				<name>ControlMessage</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="Aspect" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>105,182</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<attribute kind="Delivery" status="meta">
+					<value>reliable</value>
+				</attribute>
+				<attribute kind="EnableLogging">
+					<value>true</value>
+				</attribute>
+				<attribute kind="LogLevel" status="meta">
+					<value>NORMAL</value>
+				</attribute>
+				<attribute kind="Order">
+					<value>timestamp</value>
+				</attribute>
+				<atom id="id-0066-00000001" kind="Parameter" role="Parameter" guid="{d05652b8-1361-448a-8de1-9998a61da533}" relid="0x1">
+					<name>heater</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>259,350</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="Hidden" status="meta">
+						<value>false</value>
+					</attribute>
+					<attribute kind="ParameterType">
+						<value>boolean</value>
+					</attribute>
+				</atom>
+				<atom id="id-0066-00000002" kind="Parameter" role="Parameter" guid="{fc211d3c-3fa1-45e1-ac17-879f21da5f45}" relid="0x2">
+					<name>cooler</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>224,308</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="Hidden" status="meta">
+						<value>false</value>
+					</attribute>
+					<attribute kind="ParameterType">
+						<value>boolean</value>
+					</attribute>
+				</atom>
+				<atom id="id-0066-00000003" kind="Parameter" role="Parameter" guid="{b47a0d3f-0c3e-405e-8e32-983b8b15289f}" relid="0x3">
+					<name>fan1</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>168,224</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="Hidden" status="meta">
+						<value>false</value>
+					</attribute>
+					<attribute kind="ParameterType">
+						<value>boolean</value>
+					</attribute>
+				</atom>
+				<atom id="id-0066-00000004" kind="Parameter" role="Parameter" guid="{11663813-b0ba-451a-bb95-3795943e3172}" relid="0x4">
+					<name>fan2</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>196,266</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="Hidden" status="meta">
+						<value>false</value>
+					</attribute>
+					<attribute kind="ParameterType">
+						<value>boolean</value>
+					</attribute>
+				</atom>
+			</model>
+			<model id="id-0065-00000051" kind="Interaction" role="Interaction" guid="{5565e108-eb35-4a35-b3fc-b743a6ed9dd1}" relid="0x25" childrelidcntr="0x2">
+				<name>SensorMessage</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="Aspect" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>280,182</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<attribute kind="Delivery" status="meta">
+					<value>reliable</value>
+				</attribute>
+				<attribute kind="EnableLogging" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="LogLevel" status="meta">
+					<value>NORMAL</value>
+				</attribute>
+				<attribute kind="Order" status="meta">
+					<value>timestamp</value>
+				</attribute>
+				<atom id="id-0066-00000011" kind="Parameter" role="Parameter" guid="{1606907e-6b6c-44ea-995d-16c7f6d1d9f4}" relid="0x1">
+					<name>Value</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>140,98</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="Hidden" status="meta">
+						<value>false</value>
+					</attribute>
+					<attribute kind="ParameterType">
+						<value>double</value>
+					</attribute>
+				</atom>
+				<atom id="id-0066-00000012" kind="Parameter" role="Parameter" guid="{01996474-2c5c-4212-a76f-7934efff0749}" relid="0x2">
+					<name>Units</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>140,154</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="Hidden" status="meta">
+						<value>false</value>
+					</attribute>
+					<attribute kind="ParameterType" status="meta">
+						<value>String</value>
+					</attribute>
+				</atom>
+			</model>
+			<reference id="id-0067-00000007" kind="InteractionProxy" role="InteractionProxy" guid="{9f705ceb-d071-4111-aea0-7d743e75676a}" relid="0x23" referred="id-0065-00000021">
+				<name>C2WInteractionRoot</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="Aspect" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>42,28</value>
+						</regnode>
+					</regnode>
+				</regnode>
+			</reference>
+			<connection id="id-0068-00000068" kind="InteractionInheritance" role="InteractionInheritance" guid="{dec5348d-09fc-4da5-a3c1-74d495615eae}" relid="0x24">
+				<name>InteractionInheritance</name>
+				<regnode name="autorouterPref" isopaque="yes">
+					<value>Ns</value>
+				</regnode>
+				<connpoint role="src" target="id-0065-00000003"/>
+				<connpoint role="dst" target="id-0067-00000007"/>
+			</connection>
+			<connection id="id-0068-00000070" kind="InteractionInheritance" role="InteractionInheritance" guid="{96de1d36-5b21-4d92-b2fb-86b45fd6b0e1}" relid="0x26">
+				<name>InteractionInheritance</name>
+				<regnode name="autorouterPref" isopaque="yes">
+					<value>Ns</value>
+				</regnode>
+				<connpoint role="src" target="id-0065-00000051"/>
+				<connpoint role="dst" target="id-0067-00000007"/>
+			</connection>
+		</model>
+		<model id="id-0065-0000000e" kind="FOMSheet" guid="{ebe9f51b-beda-46fb-8e8d-9ec3c979e275}" relid="0x2" childrelidcntr="0x27">
+			<name>Federates</name>
+			<attribute kind="MelderPackageName" status="meta">
+				<value></value>
+			</attribute>
+			<model id="id-0065-0000000f" kind="Federate" role="Federate" guid="{c4a3f2b3-5449-4f00-9258-4b30bf6fd476}" relid="0x1" childrelidcntr="0x0">
+				<name>Controller</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="Aspect" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>567,112</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<regnode name="namePosition" isopaque="yes">
+					<value>2</value>
+				</regnode>
+				<attribute kind="EnableROAsynchronousDelivery" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="FederateType" status="meta">
+					<value>1</value>
+				</attribute>
+				<attribute kind="GeneratorClass" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="InstantiationScript" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="Lookahead">
+					<value>0.20000000000000001</value>
+				</attribute>
+				<attribute kind="Meld" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="Step" status="meta">
+					<value>1</value>
+				</attribute>
+				<attribute kind="TimeConstrained" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="TimeRegulating" status="meta">
+					<value>true</value>
+				</attribute>
+			</model>
+			<model id="id-0065-00000010" kind="Federate" role="Federate" guid="{9d02e247-c4a9-4f82-a13f-36a88ad8a3f9}" relid="0x2" childrelidcntr="0x0">
+				<name>HVAC</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="Aspect" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>84,112</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<regnode name="namePosition" isopaque="yes">
+					<value>6</value>
+				</regnode>
+				<attribute kind="EnableROAsynchronousDelivery" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="FederateType" status="meta">
+					<value>1</value>
+				</attribute>
+				<attribute kind="GeneratorClass" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="InstantiationScript" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="Lookahead">
+					<value>0.20000000000000001</value>
+				</attribute>
+				<attribute kind="Meld" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="Step" status="meta">
+					<value>1</value>
+				</attribute>
+				<attribute kind="TimeConstrained" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="TimeRegulating" status="meta">
+					<value>true</value>
+				</attribute>
+			</model>
+			<reference id="id-0067-00000001" kind="InteractionProxy" role="InteractionProxy" guid="{1bf784a0-780f-421f-87e4-b4dde87ac86e}" relid="0x3" referred="id-0065-00000003">
+				<name>ControlMessage</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="Aspect" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>308,210</value>
+						</regnode>
+					</regnode>
+				</regnode>
+			</reference>
+			<reference id="id-0067-0000000c" kind="InteractionProxy" role="InteractionProxy" guid="{e5e20530-cb88-46de-b61e-f702695db857}" relid="0x25" referred="id-0065-00000051">
+				<name>SensorMessage</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="Aspect" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>308,56</value>
+						</regnode>
+					</regnode>
+				</regnode>
+			</reference>
+			<connection id="id-0068-00000069" kind="StaticInteractionPublish" role="StaticInteractionPublish" guid="{5075c853-ca68-47e6-b6be-a5925ea7f1fa}" relid="0x23">
+				<name>StaticInteractionPublish</name>
+				<regnode name="autorouterPref" isopaque="yes">
+					<value>Se</value>
+				</regnode>
+				<attribute kind="EnableLogging">
+					<value>true</value>
+				</attribute>
+				<attribute kind="LogLevel" status="meta">
+					<value>NORMAL</value>
+				</attribute>
+				<connpoint role="src" target="id-0065-0000000f"/>
+				<connpoint role="dst" target="id-0067-00000001"/>
+			</connection>
+			<connection id="id-0068-0000006a" kind="StaticInteractionSubscribe" role="StaticInteractionSubscribe" guid="{e811b39a-2493-499a-856f-4b5d5f40d202}" relid="0x24">
+				<name>StaticInteractionSubscribe</name>
+				<regnode name="autorouterPref" isopaque="yes">
+					<value>Ws</value>
+				</regnode>
+				<attribute kind="EnableLogging">
+					<value>true</value>
+				</attribute>
+				<attribute kind="LogLevel" status="meta">
+					<value>NORMAL</value>
+				</attribute>
+				<attribute kind="OriginFedFilter" status="meta">
+					<value>BOTH</value>
+				</attribute>
+				<attribute kind="SrcFedFilter" status="meta">
+					<value>MAPPER_FEDERATES</value>
+				</attribute>
+				<connpoint role="dst" target="id-0065-00000010"/>
+				<connpoint role="src" target="id-0067-00000001"/>
+			</connection>
+			<connection id="id-0068-00000071" kind="StaticInteractionPublish" role="StaticInteractionPublish" guid="{525dc779-cfa0-4502-aff9-3c8aac0629b2}" relid="0x26">
+				<name>StaticInteractionPublish</name>
+				<regnode name="autorouterPref" isopaque="yes">
+					<value>Nw</value>
+				</regnode>
+				<attribute kind="EnableLogging" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="LogLevel" status="meta">
+					<value>NORMAL</value>
+				</attribute>
+				<connpoint role="src" target="id-0065-00000010"/>
+				<connpoint role="dst" target="id-0067-0000000c"/>
+			</connection>
+			<connection id="id-0068-00000072" kind="StaticInteractionSubscribe" role="StaticInteractionSubscribe" guid="{801098d5-af8b-467e-a911-c95598694784}" relid="0x27">
+				<name>StaticInteractionSubscribe</name>
+				<regnode name="autorouterPref" isopaque="yes">
+					<value>Ew</value>
+				</regnode>
+				<attribute kind="EnableLogging" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="LogLevel" status="meta">
+					<value>NORMAL</value>
+				</attribute>
+				<attribute kind="OriginFedFilter" status="meta">
+					<value>BOTH</value>
+				</attribute>
+				<attribute kind="SrcFedFilter" status="meta">
+					<value>MAPPER_FEDERATES</value>
+				</attribute>
+				<connpoint role="dst" target="id-0065-0000000f"/>
+				<connpoint role="src" target="id-0067-0000000c"/>
+			</connection>
+		</model>
+		<model id="id-0065-00000011" kind="FOMSheet" guid="{4eff9814-05d2-46e0-9938-6fb3c65428d6}" relid="0x3" childrelidcntr="0x9">
+			<name>Simulation</name>
+			<attribute kind="MelderPackageName" status="meta">
+				<value></value>
+			</attribute>
+			<model id="id-0065-00000012" kind="Experiment" role="Experiment" guid="{23fb1ba6-28f5-4de7-a91b-27d999535360}" relid="0x2" childrelidcntr="0x6">
+				<name>main</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="Aspect" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>224,91</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<regnode name="portLabelLength" isopaque="yes">
+					<value>0</value>
+				</regnode>
+				<attribute kind="AutoStartFedMgr" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="EndTime">
+					<value>50</value>
+				</attribute>
+				<attribute kind="ExecutionPauseTimes" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="ExperimentLogLevel" status="meta">
+					<value>NORMAL</value>
+				</attribute>
+				<attribute kind="FMLookahead" status="meta">
+					<value>0.20000000000000001</value>
+				</attribute>
+				<attribute kind="FMStep">
+					<value>1</value>
+				</attribute>
+				<attribute kind="FederationName">
+					<value>BBBHelloWorld</value>
+				</attribute>
+				<attribute kind="Realtime" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="Seed4DurRNG" status="meta">
+					<value>0</value>
+				</attribute>
+				<attribute kind="TerminateOnAllCOAsExecuted" status="meta">
+					<value>false</value>
+				</attribute>
+				<reference id="id-0067-00000002" kind="FederateExecution" role="FederateExecution" guid="{cd06b42d-040f-49f4-8f1d-d842a4166f65}" relid="0x1" referred="id-0065-00000010">
+					<name>HVAC</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>336,161</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="Command">
+						<value></value>
+					</attribute>
+				</reference>
+				<reference id="id-0067-00000003" kind="FederateExecution" role="FederateExecution" guid="{d4c70054-e92d-4741-a7f3-1c183d98eea7}" relid="0x2" referred="id-0065-0000000f">
+					<name>Controller</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>91,161</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="Command">
+						<value></value>
+					</attribute>
+				</reference>
+			</model>
+			<model id="id-0065-00000013" kind="Network" role="Network" guid="{611232fb-e1e3-4695-83a7-c862b9c85e5f}" relid="0x3" childrelidcntr="0x6">
+				<name>Network</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="Aspect" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>28,21</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<model id="id-0065-00000014" kind="Computer" role="Computer" guid="{103e7497-9520-4cda-ad0d-6511e46c0431}" relid="0x1" childrelidcntr="0x0">
+					<name>localhost</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>177,177</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="IPAddress">
+						<value>127.0.0.1</value>
+					</attribute>
+					<attribute kind="Platform">
+						<value>LINUX</value>
+					</attribute>
+					<attribute kind="SSHLogin">
+						<value>c2wt</value>
+					</attribute>
+					<attribute kind="SSHPassword">
+						<value>C2WTunnel</value>
+					</attribute>
+				</model>
+				<model id="id-0065-00000015" kind="Computer" role="Computer" guid="{2a13bbe3-55c5-49bb-9cf2-3b358a3a17fb}" relid="0x3" childrelidcntr="0x0">
+					<name>BBBHost</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>399,175</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="IPAddress">
+						<value>129.59.105.90</value>
+					</attribute>
+					<attribute kind="Platform">
+						<value>LINUX</value>
+					</attribute>
+					<attribute kind="SSHLogin">
+						<value>ubuntu</value>
+					</attribute>
+					<attribute kind="SSHPassword">
+						<value>bbbros</value>
+					</attribute>
+				</model>
+				<model id="id-0065-00000016" kind="Computer" role="Computer" guid="{788cd22a-1263-4585-a972-f5719878550b}" relid="0x4" childrelidcntr="0x0">
+					<name>loopback</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>175,287</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="IPAddress">
+						<value>127.0.0.1</value>
+					</attribute>
+					<attribute kind="Platform">
+						<value>LINUX</value>
+					</attribute>
+					<attribute kind="SSHLogin">
+						<value>c2wt</value>
+					</attribute>
+					<attribute kind="SSHPassword">
+						<value>C2WTunnel</value>
+					</attribute>
+				</model>
+				<model id="id-0065-00000017" kind="Computer" role="Computer" guid="{2d43033e-f0eb-4b95-b899-d1c296059595}" relid="0x5" childrelidcntr="0x0">
+					<name>BBBLocalhost</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>175,392</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="IPAddress">
+						<value>127.0.0.1</value>
+					</attribute>
+					<attribute kind="Platform">
+						<value>LINUX</value>
+					</attribute>
+					<attribute kind="SSHLogin">
+						<value>ubuntu</value>
+					</attribute>
+					<attribute kind="SSHPassword">
+						<value>bbbros</value>
+					</attribute>
+				</model>
+				<model id="id-0065-0000004f" kind="Computer" role="Computer" guid="{8bc6a855-a5ae-4e47-8133-27058d200e5b}" relid="0x6" childrelidcntr="0x0">
+					<name>ControllerHost</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>399,287</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="IPAddress">
+						<value>129.59.105.52</value>
+					</attribute>
+					<attribute kind="Platform" status="meta">
+						<value>LINUX</value>
+					</attribute>
+					<attribute kind="SSHLogin">
+						<value>c2wt</value>
+					</attribute>
+					<attribute kind="SSHPassword">
+						<value>C2WTunnel</value>
+					</attribute>
+				</model>
+			</model>
+			<model id="id-0065-00000018" kind="Deployment" role="Deployment" guid="{76feccb2-bd54-4a8a-a9b7-f06f10277221}" relid="0x7" childrelidcntr="0x10">
+				<name>main-Deployment</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="Aspect" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>28,245</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<reference id="id-0067-00000004" kind="ExperimentRef" role="ExperimentRef" guid="{9078896e-5dda-4050-8b4b-94d4289b58a0}" relid="0x3" referred="id-0065-00000012">
+					<name>main</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>315,119</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<regnode name="portLabelLength" isopaque="yes">
+						<value>0</value>
+					</regnode>
+					<attribute kind="Timer" status="meta">
+						<value>-1</value>
+					</attribute>
+				</reference>
+				<reference id="id-0067-00000008" kind="Host" role="Host" guid="{518e0620-e0f0-4c6f-9be6-fdc6db905be6}" relid="0xd" referred="id-0065-0000004f">
+					<name>ControllerHost</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>105,259</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="Main">
+						<value>true</value>
+					</attribute>
+				</reference>
+				<reference id="id-0067-00000009" kind="Host" role="Host" guid="{47e04f0f-3f2e-41d2-8422-c67e4074076d}" relid="0xf" referred="id-0065-00000015">
+					<name>BBBHost</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>567,259</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="Main" status="meta">
+						<value>false</value>
+					</attribute>
+				</reference>
+				<connection id="id-0068-0000006b" kind="ExecuteOn" role="ExecuteOn" guid="{fc86980c-3e25-4503-84f0-3d5892a9c398}" relid="0xe">
+					<name>ExecuteOn</name>
+					<regnode name="autorouterPref" isopaque="yes">
+						<value>n</value>
+					</regnode>
+					<connpoint role="src" target="id-0067-00000003" refs="id-0067-00000004"/>
+					<connpoint role="dst" target="id-0067-00000008"/>
+				</connection>
+				<connection id="id-0068-0000006c" kind="ExecuteOn" role="ExecuteOn" guid="{96130533-e388-46f1-ad11-276b0667cd5e}" relid="0x10">
+					<name>ExecuteOn</name>
+					<regnode name="autorouterPref" isopaque="yes">
+						<value>n</value>
+					</regnode>
+					<connpoint role="src" target="id-0067-00000002" refs="id-0067-00000004"/>
+					<connpoint role="dst" target="id-0067-00000009"/>
+				</connection>
+			</model>
+			<model id="id-0065-00000050" kind="Deployment" role="Deployment" guid="{86b00f27-304e-4da1-962f-bb0a3ce1f40b}" relid="0x9" childrelidcntr="0x5">
+				<name>allBBB-Deployment</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="Aspect" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>399,259</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<reference id="id-0067-0000000a" kind="ExperimentRef" role="ExperimentRef" guid="{74f20201-c004-44e0-bdba-7e39d5bf093b}" relid="0x1" referred="id-0065-00000012">
+					<name>main</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>231,70</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<regnode name="portLabelLength" isopaque="yes">
+						<value>0</value>
+					</regnode>
+					<attribute kind="Timer" status="meta">
+						<value>-1</value>
+					</attribute>
+				</reference>
+				<reference id="id-0067-0000000b" kind="Host" role="Host" guid="{50a21541-74c3-44cc-9f87-5307b5f84d19}" relid="0x2" referred="id-0065-00000017">
+					<name>BBBLocalhost</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>266,259</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="Main">
+						<value>true</value>
+					</attribute>
+				</reference>
+				<connection id="id-0068-0000006d" kind="ExecuteOn" role="ExecuteOn" guid="{5a16e0e4-adc7-4f50-bd3b-496bda0ee279}" relid="0x3">
+					<name>ExecuteOn</name>
+					<regnode name="autorouterPref" isopaque="yes">
+						<value>w</value>
+					</regnode>
+					<connpoint role="src" target="id-0067-00000003" refs="id-0067-0000000a"/>
+					<connpoint role="dst" target="id-0067-0000000b"/>
+				</connection>
+				<connection id="id-0068-0000006f" kind="ExecuteOn" role="ExecuteOn" guid="{bbc6a94d-4ddd-468c-b7c0-0ad44db4c93f}" relid="0x5">
+					<name>ExecuteOn</name>
+					<regnode name="autorouterPref" isopaque="yes">
+						<value>e</value>
+					</regnode>
+					<connpoint role="src" target="id-0067-00000002" refs="id-0067-0000000a"/>
+					<connpoint role="dst" target="id-0067-0000000b"/>
+				</connection>
+			</model>
+		</model>
+		<model id="id-0065-00000019" kind="FOMSheet" guid="{ebb9af33-2e27-4d13-818c-3df844bbb853}" relid="0x1" childrelidcntr="0x102">
+			<name>Base</name>
+			<attribute kind="MelderPackageName" status="meta">
+				<value></value>
+			</attribute>
+			<model id="id-0065-0000001a" kind="Interaction" role="Interaction" guid="{9c7af776-b31e-4a84-b2e2-a460f54d68d7}" relid="0xd" childrelidcntr="0x0">
+				<name>SimLog</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="Aspect" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>322,287</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<regnode name="_detachedFrom" isopaque="yes">
+					<value>{e23e7eef-c549-44fa-b0ce-2a2247a5082c}</value>
+				</regnode>
+				<attribute kind="Delivery" status="meta">
+					<value>reliable</value>
+				</attribute>
+				<attribute kind="EnableLogging" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="LogLevel" status="meta">
+					<value>NORMAL</value>
+				</attribute>
+				<attribute kind="Order" status="meta">
+					<value>timestamp</value>
+				</attribute>
+				<atom id="id-0066-0000000a" kind="Parameter" role="Parameter" guid="{9d562adc-87ee-42fb-8ebe-e5978e29746a}" relid="0x1">
+					<name>Comment</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>224,252</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="Hidden" status="meta">
+						<value>false</value>
+					</attribute>
+					<attribute kind="ParameterType" status="meta">
+						<value>String</value>
+					</attribute>
+				</atom>
+				<atom id="id-0066-0000000b" kind="Parameter" role="Parameter" guid="{0f3f96da-1df9-40ce-9144-2ed9482a60ee}" relid="0x2">
+					<name>Time</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>189,210</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="Hidden" status="meta">
+						<value>false</value>
+					</attribute>
+					<attribute kind="ParameterType">
+						<value>double</value>
+					</attribute>
+				</atom>
+				<atom id="id-0066-0000000c" kind="Parameter" role="Parameter" guid="{89ec472c-aa11-40c6-adda-029b62804ef1}" relid="0x3">
+					<name>FedName</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>147,168</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="Hidden" status="meta">
+						<value>false</value>
+					</attribute>
+					<attribute kind="ParameterType" status="meta">
+						<value>String</value>
+					</attribute>
+				</atom>
+			</model>
+			<model id="id-0065-0000001b" kind="Interaction" role="Interaction" guid="{686ab350-e2b4-45d6-aade-de8293947c90}" relid="0xe" childrelidcntr="0x0">
+				<name>SimulationControl</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="Aspect" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>77,231</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<regnode name="_detachedFrom" isopaque="yes">
+					<value>{e23e7eef-c549-44fa-b0ce-2a2247a5082c}</value>
+				</regnode>
+				<attribute kind="Delivery" status="meta">
+					<value>reliable</value>
+				</attribute>
+				<attribute kind="EnableLogging" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="LogLevel" status="meta">
+					<value>NORMAL</value>
+				</attribute>
+				<attribute kind="Order" status="meta">
+					<value>timestamp</value>
+				</attribute>
+			</model>
+			<model id="id-0065-0000001c" kind="Interaction" role="Interaction" guid="{f9a46851-dbc1-48c2-b38a-89e732f49ce9}" derivedfrom="id-0065-0000001b" isinstance="no" isprimary="yes" relid="0x8" childrelidcntr="0x0">
+				<name>SimEnd</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="Aspect" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>189,329</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<regnode name="_detachedFrom" isopaque="yes">
+					<value>{e23e7eef-c549-44fa-b0ce-2a2247a5082c}</value>
+				</regnode>
+				<attribute kind="Delivery" status="meta">
+					<value>reliable</value>
+				</attribute>
+				<attribute kind="EnableLogging" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="LogLevel" status="meta">
+					<value>NORMAL</value>
+				</attribute>
+				<attribute kind="Order" status="meta">
+					<value>timestamp</value>
+				</attribute>
+			</model>
+			<model id="id-0065-0000001d" kind="Interaction" role="Interaction" guid="{8142d9ba-a8d0-4abd-9bc0-93e7ff41f5b4}" derivedfrom="id-0065-0000001b" isinstance="no" isprimary="yes" relid="0xb" childrelidcntr="0x0">
+				<name>SimResume</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="Aspect" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>98,329</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<regnode name="_detachedFrom" isopaque="yes">
+					<value>{e23e7eef-c549-44fa-b0ce-2a2247a5082c}</value>
+				</regnode>
+				<attribute kind="Delivery" status="meta">
+					<value>reliable</value>
+				</attribute>
+				<attribute kind="EnableLogging" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="LogLevel" status="meta">
+					<value>NORMAL</value>
+				</attribute>
+				<attribute kind="Order" status="meta">
+					<value>timestamp</value>
+				</attribute>
+			</model>
+			<model id="id-0065-0000001e" kind="Interaction" role="Interaction" guid="{5e618fe3-7346-4466-b739-9e0cf94d740b}" derivedfrom="id-0065-0000001b" isinstance="no" isprimary="yes" relid="0xc" childrelidcntr="0x0">
+				<name>SimPause</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="Aspect" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>14,329</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<regnode name="_detachedFrom" isopaque="yes">
+					<value>{e23e7eef-c549-44fa-b0ce-2a2247a5082c}</value>
+				</regnode>
+				<attribute kind="Delivery" status="meta">
+					<value>reliable</value>
+				</attribute>
+				<attribute kind="EnableLogging" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="LogLevel" status="meta">
+					<value>NORMAL</value>
+				</attribute>
+				<attribute kind="Order" status="meta">
+					<value>timestamp</value>
+				</attribute>
+			</model>
+			<model id="id-0065-0000001f" kind="Interaction" role="Interaction" guid="{09f83356-5970-4eb4-ae39-8583dc3b1c12}" relid="0xdf" childrelidcntr="0x0">
+				<name>ActionBase</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="Aspect" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>280,210</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<attribute kind="Delivery" status="meta">
+					<value>reliable</value>
+				</attribute>
+				<attribute kind="EnableLogging" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="LogLevel" status="meta">
+					<value>NORMAL</value>
+				</attribute>
+				<attribute kind="Order" status="meta">
+					<value>timestamp</value>
+				</attribute>
+			</model>
+			<model id="id-0065-00000020" kind="Interaction" role="Interaction" guid="{a542f84a-7a0c-4e35-9312-e2d23b8500d2}" relid="0xe0" childrelidcntr="0x0">
+				<name>OutcomeBase</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="Aspect" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>427,210</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<attribute kind="Delivery" status="meta">
+					<value>reliable</value>
+				</attribute>
+				<attribute kind="EnableLogging" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="LogLevel" status="meta">
+					<value>NORMAL</value>
+				</attribute>
+				<attribute kind="Order" status="meta">
+					<value>timestamp</value>
+				</attribute>
+			</model>
+			<model id="id-0065-00000021" kind="Interaction" role="Interaction" guid="{31be7651-babf-400b-a4f5-9ed3dcf92b25}" relid="0xf0" childrelidcntr="0x5">
+				<name>C2WInteractionRoot</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="Aspect" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>266,84</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<attribute kind="Delivery" status="meta">
+					<value>reliable</value>
+				</attribute>
+				<attribute kind="EnableLogging" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="LogLevel" status="meta">
+					<value>NORMAL</value>
+				</attribute>
+				<attribute kind="Order" status="meta">
+					<value>timestamp</value>
+				</attribute>
+				<atom id="id-0066-0000000d" kind="Parameter" role="Parameter" guid="{0b860abc-37d3-4827-997b-e70bd872f4e8}" relid="0x1">
+					<name>sourceFed</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>42,49</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="Hidden">
+						<value>true</value>
+					</attribute>
+					<attribute kind="ParameterType" status="meta">
+						<value>String</value>
+					</attribute>
+				</atom>
+				<atom id="id-0066-0000000e" kind="Parameter" role="Parameter" guid="{4fd6ece5-c330-4337-9e8f-65399e121847}" relid="0x2">
+					<name>originFed</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>14,7</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="Hidden">
+						<value>true</value>
+					</attribute>
+					<attribute kind="ParameterType" status="meta">
+						<value>String</value>
+					</attribute>
+				</atom>
+				<atom id="id-0066-0000000f" kind="Parameter" role="Parameter" guid="{f8e2cb9f-8fb1-42ae-964b-201978a540f5}" relid="0x4">
+					<name>federateFilter</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>98,126</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="Hidden">
+						<value>true</value>
+					</attribute>
+					<attribute kind="ParameterType" status="meta">
+						<value>String</value>
+					</attribute>
+				</atom>
+				<atom id="id-0066-00000010" kind="Parameter" role="Parameter" guid="{46a37e7d-4fd5-4dcb-bc69-b3eb045499ee}" relid="0x5">
+					<name>actualLogicalGenerationTime</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>70,91</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="Hidden">
+						<value>true</value>
+					</attribute>
+					<attribute kind="ParameterType">
+						<value>double</value>
+					</attribute>
+				</atom>
+			</model>
+			<model id="id-0065-00000022" kind="Interaction" role="Interaction" guid="{46d23c36-22e0-4c32-8725-0dab312e4d63}" relid="0xf5" childrelidcntr="0x0">
+				<name>InteractionRoot</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="Aspect" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>329,21</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<attribute kind="Delivery" status="meta">
+					<value>reliable</value>
+				</attribute>
+				<attribute kind="EnableLogging" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="LogLevel" status="meta">
+					<value>NORMAL</value>
+				</attribute>
+				<attribute kind="Order" status="meta">
+					<value>timestamp</value>
+				</attribute>
+			</model>
+			<model id="id-0065-00000023" kind="Interaction" role="Interaction" guid="{b74bfe02-af93-4114-b466-d8b183f3ac5d}" relid="0xfa" childrelidcntr="0x0">
+				<name>VeryLowPrio</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="Aspect" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>224,455</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<attribute kind="Delivery" status="meta">
+					<value>reliable</value>
+				</attribute>
+				<attribute kind="EnableLogging" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="LogLevel" status="meta">
+					<value>NORMAL</value>
+				</attribute>
+				<attribute kind="Order" status="meta">
+					<value>timestamp</value>
+				</attribute>
+			</model>
+			<model id="id-0065-00000024" kind="Interaction" role="Interaction" guid="{7265f34d-b304-4c7a-89e2-5e1d01bc874e}" relid="0xfb" childrelidcntr="0x0">
+				<name>MediumPrio</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="Aspect" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>392,455</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<attribute kind="Delivery" status="meta">
+					<value>reliable</value>
+				</attribute>
+				<attribute kind="EnableLogging" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="LogLevel" status="meta">
+					<value>NORMAL</value>
+				</attribute>
+				<attribute kind="Order" status="meta">
+					<value>timestamp</value>
+				</attribute>
+			</model>
+			<model id="id-0065-00000025" kind="Interaction" role="Interaction" guid="{bd88cd53-d6f4-442c-8a0e-b759b93ee2c1}" relid="0xfc" childrelidcntr="0x0">
+				<name>LowPrio</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="Aspect" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>322,455</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<attribute kind="Delivery" status="meta">
+					<value>reliable</value>
+				</attribute>
+				<attribute kind="EnableLogging" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="LogLevel" status="meta">
+					<value>NORMAL</value>
+				</attribute>
+				<attribute kind="Order" status="meta">
+					<value>timestamp</value>
+				</attribute>
+			</model>
+			<model id="id-0065-00000026" kind="Interaction" role="Interaction" guid="{7a5bb836-cb96-443b-ab36-67ab522379a6}" relid="0xfd" childrelidcntr="0x0">
+				<name>HighPrio</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="Aspect" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>483,455</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<attribute kind="Delivery" status="meta">
+					<value>reliable</value>
+				</attribute>
+				<attribute kind="EnableLogging" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="LogLevel" status="meta">
+					<value>NORMAL</value>
+				</attribute>
+				<attribute kind="Order" status="meta">
+					<value>timestamp</value>
+				</attribute>
+			</model>
+			<connection id="id-0068-00000010" kind="InteractionInheritance" role="InteractionInheritance" guid="{21cb65e5-7de4-4f02-9e7a-4fc304ae38eb}" relid="0x15">
+				<name>InteractionInheritance</name>
+				<regnode name="autorouterPref" isopaque="yes">
+					<value>Ns</value>
+				</regnode>
+				<connpoint role="dst" target="id-0065-0000001b"/>
+				<connpoint role="src" target="id-0065-0000001e"/>
+			</connection>
+			<connection id="id-0068-00000011" kind="InteractionInheritance" role="InteractionInheritance" guid="{6d7f7639-8978-44c1-bca9-e528abc0cf9a}" relid="0x6f">
+				<name>InteractionInheritance</name>
+				<regnode name="autorouterPref" isopaque="yes">
+					<value>Ns</value>
+				</regnode>
+				<connpoint role="dst" target="id-0065-0000001b"/>
+				<connpoint role="src" target="id-0065-0000001d"/>
+			</connection>
+			<connection id="id-0068-00000012" kind="InteractionInheritance" role="InteractionInheritance" guid="{dd5bf373-9c9e-4b6a-840c-a7e27fe4ef1f}" relid="0x70">
+				<name>InteractionInheritance</name>
+				<regnode name="autorouterPref" isopaque="yes">
+					<value>Ns</value>
+				</regnode>
+				<connpoint role="dst" target="id-0065-0000001b"/>
+				<connpoint role="src" target="id-0065-0000001c"/>
+			</connection>
+			<connection id="id-0068-00000013" kind="InteractionInheritance" role="InteractionInheritance" guid="{00d0d466-486c-4891-b96b-b0d5eafaf69e}" relid="0xf1">
+				<name>InteractionInheritance</name>
+				<regnode name="autorouterPref" isopaque="yes">
+					<value>Ns</value>
+				</regnode>
+				<connpoint role="src" target="id-0065-0000001f"/>
+				<connpoint role="dst" target="id-0065-00000021"/>
+			</connection>
+			<connection id="id-0068-00000014" kind="InteractionInheritance" role="InteractionInheritance" guid="{7844a28a-19f6-4f2e-a640-eaf42c41bf21}" relid="0xf2">
+				<name>InteractionInheritance</name>
+				<regnode name="autorouterPref" isopaque="yes">
+					<value>Ns</value>
+				</regnode>
+				<connpoint role="src" target="id-0065-00000020"/>
+				<connpoint role="dst" target="id-0065-00000021"/>
+			</connection>
+			<connection id="id-0068-00000015" kind="InteractionInheritance" role="InteractionInheritance" guid="{8d195006-5bca-4ac3-a0df-cf63751d5d0e}" relid="0xf4">
+				<name>InteractionInheritance</name>
+				<regnode name="autorouterPref" isopaque="yes">
+					<value>Nw</value>
+				</regnode>
+				<connpoint role="src" target="id-0065-0000001b"/>
+				<connpoint role="dst" target="id-0065-00000021"/>
+			</connection>
+			<connection id="id-0068-00000016" kind="InteractionInheritance" role="InteractionInheritance" guid="{f8e3de07-918c-427c-b61d-8a412647d444}" relid="0xf6">
+				<name>InteractionInheritance</name>
+				<regnode name="autorouterPref" isopaque="yes">
+					<value>Ns</value>
+				</regnode>
+				<connpoint role="src" target="id-0065-00000021"/>
+				<connpoint role="dst" target="id-0065-00000022"/>
+			</connection>
+			<connection id="id-0068-00000017" kind="InteractionInheritance" role="InteractionInheritance" guid="{5e9b24ea-09d1-4021-b4ae-d903c660a34e}" relid="0xfe">
+				<name>InteractionInheritance</name>
+				<regnode name="autorouterPref" isopaque="yes">
+					<value>Ns</value>
+				</regnode>
+				<connpoint role="dst" target="id-0065-0000001a"/>
+				<connpoint role="src" target="id-0065-00000023"/>
+			</connection>
+			<connection id="id-0068-00000018" kind="InteractionInheritance" role="InteractionInheritance" guid="{28224138-be62-478f-bb02-0f193bd8243d}" relid="0xff">
+				<name>InteractionInheritance</name>
+				<regnode name="autorouterPref" isopaque="yes">
+					<value>N</value>
+				</regnode>
+				<connpoint role="dst" target="id-0065-0000001a"/>
+				<connpoint role="src" target="id-0065-00000025"/>
+			</connection>
+			<connection id="id-0068-00000019" kind="InteractionInheritance" role="InteractionInheritance" guid="{b543026a-4428-4a42-82ad-a323906db67f}" relid="0x100">
+				<name>InteractionInheritance</name>
+				<regnode name="autorouterPref" isopaque="yes">
+					<value>Ns</value>
+				</regnode>
+				<connpoint role="dst" target="id-0065-0000001a"/>
+				<connpoint role="src" target="id-0065-00000024"/>
+			</connection>
+			<connection id="id-0068-0000001a" kind="InteractionInheritance" role="InteractionInheritance" guid="{77a07f6f-e896-4b95-81e8-3088406290df}" relid="0x101">
+				<name>InteractionInheritance</name>
+				<regnode name="autorouterPref" isopaque="yes">
+					<value>Ns</value>
+				</regnode>
+				<connpoint role="dst" target="id-0065-0000001a"/>
+				<connpoint role="src" target="id-0065-00000026"/>
+			</connection>
+			<connection id="id-0068-0000001b" kind="InteractionInheritance" role="InteractionInheritance" guid="{6d44054d-4441-4294-9a59-edad48c8c2e4}" relid="0x102">
+				<name>InteractionInheritance</name>
+				<regnode name="autorouterPref" isopaque="yes">
+					<value>Ns</value>
+				</regnode>
+				<connpoint role="src" target="id-0065-0000001a"/>
+				<connpoint role="dst" target="id-0065-00000021"/>
+			</connection>
+		</model>
+	</folder>
+</project>
