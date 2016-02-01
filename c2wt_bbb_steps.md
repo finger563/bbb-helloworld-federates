@@ -28,7 +28,7 @@
         * Create `computer` in Network named `localhost`
           * set its IP, username, and password properties as required
         * Create `computer` in Network named `BBB`
-          * set its IP, username, and password properties as required
+          * set its IP, username, and password properties as required (NOTE: the username for the BBB must be **root** because of libbulldog permission requirements)
       * Create `experiment` in Simulation named `main`
         * Create `FederateExecution` references named `Controller` and `HVAC` with references to the Federates created earlier
       * Create `deployment` in Simulation named `main-Deployment`
@@ -287,7 +287,28 @@
   :$C2WTROOT/3rdParty/java/libbulldog/bulldog.beagleboneblack.hardfp.jar
   ```
 
+* Configure the BBB:
+  * make sure to set up SSH keys for the root user on the BBB, this means that the public key
+
 * Install needed programs and configure the environment **on the BBB**:
+  * Because the libbulldog code uses the GPIO, it requires **root** permissions when running the program.  For this reason it is recommended that everything for this sample be placed in the root directory `/root`, and use **root** as the username in the model for the BBB computer model.
+
+  * Configure ssh keys; It is recommended to use the same ssh key that is used for the C2WT machine as for the BBB.  In this case just copy the public key to the BBB and append it to `/root/.ssh/authorized_keys`:
+
+    * On the C2WT machine:
+
+    ```bash
+    ssh-keygen -y -f id_rsa > id_rsa.pub
+    scp id_rsa.pub root@<BBB IP>:/root/.ssh/.
+    ```
+
+    * On the BBB:  
+
+    ```bash
+    cat id_rsa.pub >> /root/.ssh/authorized_keys
+    ```
+
+  * install libraries:
 
   ```bash
   sudo apt-get install curl libjava3d-java openjdk-7-jdk xvfb ant
@@ -300,20 +321,15 @@
   tar xvf portico-2.0.2-linux64.tar.gz
   ```
 
-  * Environment Variable Configuration: add the following to the end of the `$HOME/.bashrc` file on your BBB:
+  * Environment Variable Configuration: add the following to the end of the `$HOME/.bashrc` and `/etc/profile` files on your BBB:
 
   ```bash
   export C2WTROOT=$HOME/Projects/c2wt
-  export RTI_HOME=<PATH TO PORTICO DIRECTORY>, e.g. export RTI_HOME=/home/ubuntu/portico-2.0.2
+  export RTI_HOME=<PATH TO PORTICO DIRECTORY>, e.g. export RTI_HOME=$HOME/portico-2.0.2
   export JAVA_HOME=<PATH TO JAVA_HOME>, e.g. export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-armhf
   ```
 
-  * Configure ssh keys:
-
-  ```bash
-  ssh-keygen -y -f id_rsa > id_rsa.pub
-  cat id_rsa.pub >> ~/.ssh/authorized_keys
-  ```
+  where `$HOME` is `/root` in this case, because the HVAC controller requires **root** permissions to run.
 
 * Copy the built C2WT code over to the BBB:
   * **On the BBB**, make the `Projects` folder:
@@ -333,4 +349,9 @@
   ```bash
   chmod +x $C2WTROOT/core/src/cpp/ProcessId/buildProcessIdJNI.sh
   $C2WTROOT/core/src/cpp/ProcessId/buildProcessIdJNI.sh
+  ```
+* Make the remote start script **on the BBB** executable:
+  
+  ```bash
+  chmod +x $C2WTROOT/generated/BBBHelloWorld/scripts/main-Deployment/Main/start.sh
   ```

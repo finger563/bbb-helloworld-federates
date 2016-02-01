@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE project SYSTEM "mga.dtd">
 
-<project guid="{04C34FE5-D53D-48E4-98AE-0EB1A070D08F}" cdate="Mon Jan 25 11:24:51 2016" mdate="Mon Jan 25 11:24:51 2016" version="" metaguid="{2664F06E-397F-48A5-8AA9-D5E5C8190F07}" metaversion="" metaname="CASIM">
+<project guid="{F31C30ED-089E-4BEC-BCFA-E0691D4BE816}" cdate="Mon Jan 25 11:24:51 2016" mdate="Mon Jan 25 11:24:51 2016" version="" metaguid="{2664F06E-397F-48A5-8AA9-D5E5C8190F07}" metaversion="" metaname="CASIM">
 	<name>BBBHelloWorld</name>
 	<comment></comment>
 	<author></author>
@@ -512,7 +512,7 @@
 						<value>LINUX</value>
 					</attribute>
 					<attribute kind="SSHLogin">
-						<value>ubuntu</value>
+						<value>root</value>
 					</attribute>
 					<attribute kind="SSHPassword">
 						<value>bbbros</value>
@@ -587,7 +587,7 @@
 						<value>c2wt</value>
 					</attribute>
 					<attribute kind="SSHPassword">
-						<value>C2WTunnel</value>
+						<value>kerman</value>
 					</attribute>
 				</model>
 			</model>
