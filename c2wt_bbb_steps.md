@@ -293,10 +293,10 @@
   sudo apt-get install curl libjava3d-java openjdk-7-jdk xvfb ant
   ```
 
-  * Download portico from [portico sourceforge](http://sourceforge.net/projects/portico/files/Portico/portico-2.0.2/):
+  * Download portico from [portico sourceforge](http://sourceforge.net/projects/portico/files/Portico/portico-1.0.2/):
 
   ```bash
-  wget http://downloads.sourceforge.net/project/portico/Portico/portico-2.0.2/portico-2.0.2-linux64.tar.gz
+  wget http://downloads.sourceforge.net/project/portico/Portico/portico-1.0.2/portico-1.0.2-linux.tar.gz
   tar xvf portico-2.0.2-linux64.tar.gz
   ```
 
