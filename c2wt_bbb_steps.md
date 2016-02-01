@@ -332,13 +332,13 @@
   * **On the BBB**, make the `Projects` folder:
 
   ```bash
-  mkdir -p ~/Projects
+  mkdir -p $HOME/Projects
   ```
 
   * **From the C2WT machine**, copy the c2wt folder to the BBB:
 
   ```bash
-  scp -r $C2WTROOT <BBB user-name>@<BBB IP>:~/Projects/.
+  scp -r $C2WTROOT <BBB user-name>@<BBB IP>:$HOME/Projects/.
   ```
 
 * Recompile the processID library for ARM architecture **on the BBB**:
@@ -350,5 +350,23 @@
 * Make the remote start script **on the BBB** executable:
   
   ```bash
+  chmod +x $C2WTROOT/generated/BBBHelloWorld/scripts/main-Deployment/<BBB IP>/Remote/start.sh
+  ```
+
+* Make the start script **on the C2WT machine** executable:
+  
+  ```bash
   chmod +x $C2WTROOT/generated/BBBHelloWorld/scripts/main-Deployment/Main/start.sh
+  ```
+
+* Run the C2WT start script **on the C2WT machine**:
+
+  ```bash
+  $C2WTROOT/generated/BBBHelloWorld/scripts/main-Deployment/Main/start.sh
+  ```
+
+* Run the BBB start script **on the BBB**:
+
+  ```bash
+  $C2WTROOT/generated/BBBHelloWorld/scripts/main-Deployment/<BBB IP>/Remote/start.sh
   ```
