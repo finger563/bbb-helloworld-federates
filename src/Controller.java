@@ -40,8 +40,8 @@ public class Controller extends ControllerBase {
 
             while (  ( interactionRoot = getNextInteractionNoWait() ) != null ) {
 		SensorMessage msg = (SensorMessage)interactionRoot;
-		value = msg.get_Value();
-		units = msg.get_Units();
+		value = msg.get_value();
+		units = msg.get_units();
 		diff = value-setPoint;
 
 		if ( Math.abs(diff) > tolerance && diff > 0 ) {

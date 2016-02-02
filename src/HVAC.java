@@ -86,8 +86,8 @@ public class HVAC extends HVACBase {
                 System.out.println("Temperature=:" + temperature);
 
 		SensorMessage sensor_msg = create_SensorMessage();
-		sensor_msg.set_Value( temperature );
-		sensor_msg.set_Units( "deg C" );
+		sensor_msg.set_value( temperature );
+		sensor_msg.set_units( "deg C" );
 		sensor_msg.sendInteraction( getRTI(), currentTime );
 
                 if (heaterOn)

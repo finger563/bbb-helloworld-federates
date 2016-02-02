@@ -87,8 +87,8 @@
 
                     while (  ( interactionRoot = getNextInteractionNoWait() ) != null ) {
                           SensorMessage msg = (SensorMessage)interactionRoot;
-                          value = msg.get_Value();
-                          units = msg.get_Units();
+                          value = msg.get_value();
+                          units = msg.get_units();
                           diff = value-setPoint;
 
                           if ( Math.abs(diff) > tolerance && diff > 0 ) {
@@ -224,8 +224,8 @@
                         System.out.println("Temperature=:" + temperature);
 
                         SensorMessage sensor_msg = create_SensorMessage();
-                        sensor_msg.set_Value( temperature );
-                        sensor_msg.set_Units( "deg C" );
+                        sensor_msg.set_value( temperature );
+                        sensor_msg.set_units( "deg C" );
                         sensor_msg.sendInteraction( getRTI(), currentTime );
 
                         if (heaterOn)
@@ -277,10 +277,6 @@
     src.generated.bbbhelloworld.java.dir = ${src.generated.bbbhelloworld.dir}/java
     ```
   * Edit the file `$C2WTROOT/build.xml`
-    * add the following path element under `target init / path c2wt.class.path`:
-    ```xml
-    <pathelement path="${lib.java.dir}/libbulldog/bulldog.beagleboneblack.hardfp.jar"/>
-    ```
     * add the following target under the `compile-HelloWorld` target:
     ```xml
     <target name="compile-BBBHelloWorld" depends="compile-core">
@@ -300,19 +296,6 @@
     * Add `compile-BBBHelloWorld` to the `depends` list of the the target `compile`
 * Compilation
   * Compile the code by running `ant` from `$C2WTROOT` or by opening the Omnet++ IDE and running `c2wt build.xml` option from the run custom command toolbar button menu.
-* Update the classpath for the generated scripts:
-  * In `$C2WTROOT/generated/BBBHelloWorld/scripts/main-Deployment/Main/start.sh` find the last `CLASSPATH` setting in the file and extend it with:
-
-  ```bash
-  :$C2WTROOT/3rdParty/java/libbulldog/bulldog.beagleboneblack.hardfp.jar
-  ```
-
-  * In `$C2WTROOT/generated/BBBHelloWorld/scripts/main-Deployment/<BBB IP Address>/Remote/start.sh` find the last `CLASSPATH` setting in the file and extend it with:
-
-  ```bash
-  :$C2WTROOT/3rdParty/java/libbulldog/bulldog.beagleboneblack.hardfp.jar
-  ```
-
 * Install needed programs and configure the environment **on the BBB**:
   * Because the libbulldog code uses the GPIO, it requires **root** permissions when running the program.  For this reason it is recommended that everything for this sample be placed in the root directory `/root`, and use **root** as the username in the model for the BBB computer model.
 
