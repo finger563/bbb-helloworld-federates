@@ -331,7 +331,7 @@
 
   ```bash
   export C2WTROOT=$HOME/Projects/c2wt
-  export RTI_HOME=<PATH TO PORTICO DIRECTORY>, e.g. export RTI_HOME=$HOME/portico-2.0.2
+  export RTI_HOME=<PATH TO PORTICO DIRECTORY>, e.g. export RTI_HOME=$HOME/portico-1.0.2
   export JAVA_HOME=<PATH TO JAVA_HOME>, e.g. export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-armhf
   ```
 
