@@ -3,13 +3,13 @@ Model files and code for the example HVAC + controller with the BBB and associat
 
 Table of Contents:
 ------------------
-* [model-creation]
-* [code-generation]
-* [code-development]
-* [code-compilation]
-* [configure-the-bbb]
-* [copying-files]
-* [running-the-federates]
+* [Model Creation][model-creation]
+* [Code Generation][code-generation]
+* [Code Development][code-development]
+* [Code Compilation][code-compilation]
+* [Configuring the BBB][configure-the-bbb]
+* [Copying the Files Over][copying-files]
+* [Running the Federates][running-the-federates]
 
 ## Model Creation
 
