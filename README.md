@@ -1,6 +1,16 @@
 # bbb-helloworld-federates
 Model files and code for the example HVAC + controller with the BBB and associated hardware.
 
+Table of Contents:
+------------------
+* [model-creation]
+* [code-generation]
+* [code-development]
+* [code-compilation]
+* [configure-the-bbb]
+* [copying-files]
+* [running-the-federates]
+
 ## Model Creation
 
   * Create a new folder `$C2WTROOT/examples/BBBHelloWorld`, this will be `$BBBROOT`
@@ -271,10 +281,15 @@ Model files and code for the example HVAC + controller with the BBB and associat
             }
         }
     ```
+
     * Copy `TemperatureSensor.java` into this folder
+
       * add `package BBBHelloWorld;` to the top of this file.
+
   * Edit the file `$C2WTROOT/build.properties`
+
     * Add the following properties under the `helloworld` properties:
+
     ```bash
     bbbhelloworld.dir = ${examples.dir}/BBBHelloWorld
     src.bbbhelloworld.java.dir = ${bbbhelloworld.dir}/java
@@ -282,8 +297,11 @@ Model files and code for the example HVAC + controller with the BBB and associat
     src.generated.bbbhelloworld.dir = ${src.generated.dir}/BBBHelloWorld
     src.generated.bbbhelloworld.java.dir = ${src.generated.bbbhelloworld.dir}/java
     ```
+
   * Edit the file `$C2WTROOT/build.xml`
+
     * add the following target under the `compile-HelloWorld` target:
+
     ```xml
     <target name="compile-BBBHelloWorld" depends="compile-core">
             <javac source="1.6" target="1.6" destdir="${build.java.bbbhelloworld.dir}" debug="on" debuglevel="lines,vars,source" includejavaruntime="yes" includeantruntime="yes" failonerror="false" nowarn="true">
@@ -299,43 +317,54 @@ Model files and code for the example HVAC + controller with the BBB and associat
             </copy>
     </target>
     ```
+
     * Add `compile-BBBHelloWorld` to the `depends` list of the the target `compile`
-* Compilation
-  * Compile the code by running `ant` from `$C2WTROOT` or by opening the Omnet++ IDE and running `c2wt build.xml` option from the run custom command toolbar button menu.
 
-## Install needed programs and configure the environment **on the BBB**:
+## Code Compilation
 
-  * Because the libbulldog code uses the GPIO, it requires **root** permissions when running the program.  For this reason it is recommended that everything for this sample be placed in the root directory `/root`, and use **root** as the username in the model for the BBB computer model.
+Compile the code by running `ant` from `$C2WTROOT` or by opening the
+Omnet++ IDE and running `c2wt build.xml` option from the run custom
+command toolbar button menu.
 
-  * Configure ssh keys; It is recommended to use the same ssh key that is used for the C2WT machine as for the BBB.  In this case just copy the public key to the BBB and append it to `/root/.ssh/authorized_keys`:
+## Configure the BBB
 
-    * On the C2WT machine:
+Because the libbulldog code uses the GPIO, it requires **root**
+permissions when running the program.  For this reason it is
+recommended that everything for this sample be placed in the root
+directory `/root`, and use **root** as the username in the model for
+the BBB computer model.
 
-    ```bash
+Configure ssh keys; It is recommended to use the same ssh key that s
+used for the C2WT machine as for the BBB.  In this case just copy the
+public key to the BBB and append it to `/root/.ssh/authorized_keys`:
+
+* On the C2WT machine:
+
+	```bash
     ssh-keygen -y -f id_rsa > id_rsa.pub
     scp id_rsa.pub root@<BBB IP>:/root/.ssh/.
     ```
 
-    * On the BBB:  
+* On the BBB:  
 
     ```bash
     cat id_rsa.pub >> /root/.ssh/authorized_keys
     ```
 
-  * install libraries:
+* install libraries:
 
   ```bash
   sudo apt-get install curl libjava3d-java openjdk-7-jdk xvfb ant
   ```
 
-  * Download portico from [portico sourceforge](http://sourceforge.net/projects/portico/files/Portico/portico-1.0.2/):
+* Download portico from [portico sourceforge](http://sourceforge.net/projects/portico/files/Portico/portico-1.0.2/):
 
   ```bash
   wget http://downloads.sourceforge.net/project/portico/Portico/portico-1.0.2/portico-1.0.2-linux.tar.gz
   tar xvf portico-1.0.2-linux.tar.gz
   ```
 
-  * Environment Variable Configuration: add the following to the end of the `$HOME/.bashrc` and `/etc/profile` files on your BBB:
+* Environment Variable Configuration: add the following to the end of the `$HOME/.bashrc` and `/etc/profile` files on your BBB:
 
   ```bash
   export C2WTROOT=$HOME/Projects/c2wt
@@ -345,34 +374,34 @@ Model files and code for the example HVAC + controller with the BBB and associat
 
   where `$HOME` is `/root` in this case, because the HVAC controller requires **root** permissions to run.
 
-## Copy the built C2WT code over to the BBB:
+## Copyying Files
 
-  * **On the BBB**, make the `Projects` folder:
+* **On the BBB**, make the `Projects` folder:
 
   ```bash
   mkdir -p $HOME/Projects
   ```
 
-  * **From the C2WT machine**, copy the c2wt folder to the BBB:
+* **From the C2WT machine**, copy the c2wt folder to the BBB:
 
   ```bash
   scp -r $C2WTROOT <BBB user-name>@<BBB IP>:$HOME/Projects/.
   ```
 
-## Recompile the processID library for ARM architecture **on the BBB**:
+* Recompile the processID library for ARM architecture **on the BBB**:
 
   ```bash
   chmod +x $C2WTROOT/core/src/cpp/ProcessId/buildProcessIdJNI.sh
   $C2WTROOT/core/src/cpp/ProcessId/buildProcessIdJNI.sh
   ```
 
-## Make the remote start script **on the BBB** executable:
+* Make the remote start script **on the BBB** executable:
   
   ```bash
   chmod +x $C2WTROOT/generated/BBBHelloWorld/scripts/main-Deployment/<BBB IP>/Remote/start.sh
   ```
 
-## Make the start script **on the C2WT machine** executable:
+* Make the start script **on the C2WT machine** executable:
   
   ```bash
   chmod +x $C2WTROOT/generated/BBBHelloWorld/scripts/main-Deployment/Main/start.sh
@@ -380,13 +409,13 @@ Model files and code for the example HVAC + controller with the BBB and associat
 
 ## Run the Federates
 
-  * On the C2WT Machine:
+* On the C2WT Machine:
 
 	```bash
 	$C2WTROOT/generated/BBBHelloWorld/scripts/main-Deployment/Main/start.sh
 	```
 
-  * On the BBB:
+* On the BBB:
 
 	```bash
 	$C2WTROOT/generated/BBBHelloWorld/scripts/main-Deployment/<BBB IP>/Remote/start.sh
