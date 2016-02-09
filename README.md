@@ -7,6 +7,7 @@ files properly, and running the federates.
 
 Table of Contents:
 ------------------
+* [Quickstart](#quickstart)
 * [Model Creation](#model-creation)
 * [Code Generation](#code-generation)
 * [Code Development](#code-development)
@@ -14,6 +15,34 @@ Table of Contents:
 * [Configuring the BBB](#configure-the-bbb)
 * [Copying the Files Over](#copying-files)
 * [Running the Federates](#running-the-federates)
+
+## Quickstart
+
+If you already know how to make the model, or want to quickly test out
+this sample, simply perform the following steps:
+
+  * Create the sample's folder
+  
+  ```bash
+  mkdir -p $C2WTROOT/examples/BBBHelloWorld
+  ```
+
+  * Copy the model files
+  
+  ```bash
+  cp -r models $C2WTROOT/BBBHelloworld/.
+  ```
+  
+  * Copy the source code
+  
+  ```bash
+  cp -r java $C2WTROOT/BBBHelloWorld/.
+  ```
+  
+Then perform all the steps starting at
+[Code Generation](#code-generation).  This skips the
+[Model Creation](#model-creation) and
+[Code Development](#code-development) steps.
 
 ## Model Creation
 
