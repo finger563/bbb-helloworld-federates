@@ -374,7 +374,7 @@ public key to the BBB and append it to `/root/.ssh/authorized_keys`:
 
   where `$HOME` is `/root` in this case, because the HVAC controller requires **root** permissions to run.
 
-## Copyying Files
+## Copying Files
 
 * **On the BBB**, make the `Projects` folder:
 
@@ -407,7 +407,7 @@ public key to the BBB and append it to `/root/.ssh/authorized_keys`:
   chmod +x $C2WTROOT/generated/BBBHelloWorld/scripts/main-Deployment/Main/start.sh
   ```
 
-## Run the Federates
+## Running the Federates
 
 * On the C2WT Machine:
 
