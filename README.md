@@ -9,8 +9,8 @@ Table of Contents:
 ------------------
 * [Quickstart](#quickstart)
 * [Model Creation](#model-creation)
-* [Code Generation](#code-generation)
 * [Code Development](#code-development)
+* [Code Generation](#code-generation)
 * [Code Compilation](#code-compilation)
 * [Configuring the BBB](#configure-the-bbb)
 * [Copying the Files Over](#copying-files)
@@ -46,10 +46,14 @@ Then perform all the steps starting at
 
 ## Model Creation
 
-  * Create a new folder `$C2WTROOT/examples/BBBHelloWorld`, this will be `$BBBROOT`
+  * Create a new folder `$C2WTROOT/examples/BBBHelloWorld`, this will
+    be `$BBBROOT`
   * Create a new folder `$BBBROOT/models/gme`
-  * Copy the HelloWorld XME from `$C2WTROOT/examples/HelloWorld/models/gme/HelloWorld.xme` to `$BBBROOT/models/gme/BBBHelloWorld.xme`
-  * Open the new model file with GME and create a new project file for it in the same folder as `BBBHelloWorld.mga`
+  * Copy the HelloWorld XME from
+    `$C2WTROOT/examples/HelloWorld/models/gme/HelloWorld.xme` to
+    `$BBBROOT/models/gme/BBBHelloWorld.xme`
+  * Open the new model file with GME and create a new project file for
+    it in the same folder as `BBBHelloWorld.mga`
   * Rename the root object to BBBHelloWorld
   * Delete the `Objects` FOM Sheet
   * Delete the `Federates` FOM Sheet
@@ -63,34 +67,45 @@ Then perform all the steps starting at
         * Add a `string` parameter: `Units`
   * Create two new top-level FOM Sheets:
     * `Federates`
-      * Create two models of type `Federate` in Federates (insert model): named `Controller`, and `HVAC` with the default properties, this will make them Java federates.
-      * Create reference of type `InteractionProxy` in Federates (insert reference) named `ControlMessage` and drag `BBBHelloWorld/Ineractions/ControlMessage` from the GME Browser/ tree navigator onto the new proxy to set the reference.
-      * Create reference of type `InteractionProxy` in Federates (insert reference) named `SensorMessage` and drag `BBBHelloWorld/Ineractions/SensorMessage` from the GME Browser/ tree navigator onto the new proxy to set the reference.
-      * Enter connect mode (ctrl+2) and connect `Controller` to `ControlMessage`, and `ControlMessage` to `HVAC`
-      * Enter connect mode (ctrl+2) and connect `HVAC` to `SensorMessage`, and `SensorMessage` to `Controller`
+      * Create two models of type `Federate` in Federates (insert
+        model): named `Controller`, and `HVAC` with the default
+        properties, this will make them Java federates.
+      * Create reference of type `InteractionProxy` in Federates
+        (insert reference) named `ControlMessage` and drag
+        `BBBHelloWorld/Ineractions/ControlMessage` from the GME
+        Browser/ tree navigator onto the new proxy to set the
+        reference.
+      * Create reference of type `InteractionProxy` in Federates
+        (insert reference) named `SensorMessage` and drag
+        `BBBHelloWorld/Ineractions/SensorMessage` from the GME
+        Browser/ tree navigator onto the new proxy to set the
+        reference.
+      * Enter connect mode (ctrl+2) and connect `Controller` to
+        `ControlMessage`, and `ControlMessage` to `HVAC`
+      * Enter connect mode (ctrl+2) and connect `HVAC` to
+        `SensorMessage`, and `SensorMessage` to `Controller`
     * `Simulation`
       * Create `network` in Simulation named `Network`
         * Create `computer` in Network named `localhost`
           * set its IP, username, and password properties as required
         * Create `computer` in Network named `BBB`
-          * set its IP, username, and password properties as required (NOTE: the username for the BBB must be **root** because of libbulldog permission requirements)
+          * set its IP, username, and password properties as required
+            (NOTE: the username for the BBB must be **root** because
+            of libbulldog permission requirements)
       * Create `experiment` in Simulation named `main`
-        * Create `FederateExecution` references named `Controller` and `HVAC` with references to the Federates created earlier
+        * Create `FederateExecution` references named `Controller` and
+          `HVAC` with references to the Federates created earlier
       * Create `deployment` in Simulation named `main-Deployment`
-        * Create `ExperimentRef` reference named `main` with reference to the experiment
-        * Create `Host` references named `localhost` and `BBB` with references to the Computers created earlier
+        * Create `ExperimentRef` reference named `main` with reference
+          to the experiment
+        * Create `Host` references named `localhost` and `BBB` with
+          references to the Computers created earlier
           * Set Attribute `Main` to `True` for the Host `localhost`
-        * Enter connect mode and connect `main/Controller` to `localhost` and `main/HVAC` to `BBB`
-
-## Code Generation
-
-  * Run the `C2W Main Interpreter` by clicking it's corresponding toolbar button (java icon, upper right)
-  * Run the `C2W Deployment Interpreter` by clicking it's corresponding toolbar button (java icon, upper right)
+        * Enter connect mode and connect `main/Controller` to
+          `localhost` and `main/HVAC` to `BBB`
 
 ## Code Development
 
-  * Create a new folder `$C2WTROOT/3rdParty/java/libbulldog`
-    * place `bulldog.beagleboneblack.hardfp.jar` and `libbulldog-linux.so` into this folder
   * Create a new folder `$BBBROOT/java/BBBHelloWorld`
     * Create new file in this directory `Controller.java`:
     ```java
@@ -353,6 +368,15 @@ Then perform all the steps starting at
 
     * Add `compile-BBBHelloWorld` to the `depends` list of the the target `compile`
 
+## Code Generation
+
+  * Run the `C2W Main Interpreter` on the BBBHelloWorld model by
+    clicking it's corresponding toolbar button (java icon, upper
+    right)
+  * Run the `C2W Deployment Interpreter` on the BBBHelloWorld model by
+    clicking it's corresponding toolbar button (java icon, upper
+    right)
+
 ## Code Compilation
 
 Compile the code by running `ant` from `$C2WTROOT` or by opening the
@@ -390,14 +414,16 @@ public key to the BBB and append it to `/root/.ssh/authorized_keys`:
   sudo apt-get install curl libjava3d-java openjdk-7-jdk xvfb ant
   ```
 
-* Download portico from [portico sourceforge](http://sourceforge.net/projects/portico/files/Portico/portico-1.0.2/):
+* Download portico from
+  [portico sourceforge](http://sourceforge.net/projects/portico/files/Portico/portico-1.0.2/):
 
   ```bash
   wget http://downloads.sourceforge.net/project/portico/Portico/portico-1.0.2/portico-1.0.2-linux.tar.gz
   tar xvf portico-1.0.2-linux.tar.gz
   ```
 
-* Environment Variable Configuration: add the following to the end of the `$HOME/.bashrc` and `/etc/profile` files on your BBB:
+* Environment Variable Configuration: add the following to the end of
+  the `$HOME/.bashrc` and `/etc/profile` files on your BBB:
 
   ```bash
   export C2WTROOT=$HOME/Projects/c2wt
@@ -405,7 +431,8 @@ public key to the BBB and append it to `/root/.ssh/authorized_keys`:
   export JAVA_HOME=<PATH TO JAVA_HOME>, e.g. export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-armhf
   ```
 
-  where `$HOME` is `/root` in this case, because the HVAC controller requires **root** permissions to run.
+  where `$HOME` is `/root` in this case, because the HVAC controller
+  requires **root** permissions to run.
 
 ## Copying Files
 
