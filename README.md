@@ -1,6 +1,10 @@
 # bbb-helloworld-federates
 Model files and code for the example HVAC + controller with the BBB and associated hardware.
 
+This README explains the process of creating the model, generating the
+code, writing the business logic, configuring the BBB, copying the
+files properly, and running the federates.
+
 Table of Contents:
 ------------------
 * [Model Creation](#model-creation)
